@@ -1,0 +1,4 @@
+A short (max 300 words ) text file describing your findings on what containers share with
+the host. Put that to “findings.txt”
+
+Docker containers share the host systems kernel for performance. But related to this task, port 5000 from service1 is mapped to host systems ports. No ip addresses are shared to host system.
