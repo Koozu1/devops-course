@@ -1,0 +1,11 @@
+Output of “docker container ls”
+
+CONTAINER ID   IMAGE             COMMAND                  CREATED              STATUS              PORTS                    NAMES
+cf2d5be5a5a3   e3-service2       "python app.py"          About a minute ago   Up About a minute   5000/tcp                 e3-service2-1
+fc3604e5aab8   e3-service1       "python app.py"          About a minute ago   Up About a minute   0.0.0.0:5000->5000/tcp   e3-service1-1
+
+
+Output of “docker network ls”
+
+NETWORK ID     NAME                                     DRIVER    SCOPE
+d758cce19087   e3_net                                   bridge    local
