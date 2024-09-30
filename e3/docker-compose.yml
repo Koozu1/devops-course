@@ -5,7 +5,7 @@ services:
     build:
       context: ./service1
     ports:
-      - "5000:5000"
+      - "8199:8199"
     networks:
       - net
 
