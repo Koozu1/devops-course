@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  service1-1:
+    build:
+      context: ./service1
+    networks:
+      - net
+  service1-2:
+    build:
+      context: ./service1
+    networks:
+      - net
+  service1-3:
+    build:
+      context: ./service1
+    networks:
+      - net
+
+  service2:
+    build:
+      context: ./service2
+    networks:
+      - net
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8081:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/html:/usr/share/nginx/html
+      - ./nginx/auth/.htpasswd:/etc/nginx/.htpasswd
+    networks:
+      - net
+    depends_on:
+      - service1-1
+      - service1-2
+      - service1-3
+      - service2
+
+networks:
+  net:
+    driver: bridge
