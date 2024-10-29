@@ -1,0 +1,14 @@
+Output of “docker container ls”
+
+CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS                          PORTS                                   NAMES
+4b0c07f2fa94   nginx:latest               "/docker-entrypoint.…"   2 minutes ago   Up 42 seconds                   0.0.0.0:8081->80/tcp, :::8081->80/tcp   devops-course-nginx-1
+8f5437578c78   devops-course-service1-1   "python app.py"          2 minutes ago   Up 43 seconds                                                           devops-course-service1-1-1
+35a7dc27036d   devops-course-service2     "python app.py"          2 minutes ago   Up 43 seconds                                                           devops-course-service2-1
+846aefbc1470   devops-course-service1-3   "python app.py"          2 minutes ago   Up 43 seconds                                                           devops-course-service1-3-1
+90e1d50e525a   devops-course-service1-2   "python app.py"          2 minutes ago   Up 43 seconds                                                           devops-course-service1-2-1
+
+
+Output of “docker network ls”
+
+NETWORK ID     NAME                                     DRIVER    SCOPE
+e35f732fb8f2   devops-course_net                        bridge    local
